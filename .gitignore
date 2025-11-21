@@ -1,5 +1,8 @@
 # Gitignore for ChatConnect
 
+# Personal development notes with credentials
+DEVELOPMENT_NOTES.txt
+
 # Go Backend
 go-chat-backend/chatserver
 *.exe
