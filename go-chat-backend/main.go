@@ -13,6 +13,7 @@ import (
 	"chat.app/backend/websocket"
 
 	ws "github.com/gorilla/websocket"
+	"github.com/joho/godotenv"
 	"go.mongodb.org/mongo-driver/bson"
 	"go.mongodb.org/mongo-driver/mongo"
 	"go.mongodb.org/mongo-driver/mongo/options"
@@ -201,6 +202,11 @@ func loginHandler(w http.ResponseWriter, r *http.Request) {
 }
 
 func main() {
+	// Load .env file
+	if err := godotenv.Load(); err != nil {
+		log.Println("No .env file found, using system environment variables")
+	}
+
 	initDB()
 
 	hubManager := websocket.NewHubManager()
