@@ -124,7 +124,7 @@ Server runs on `http://localhost:8000`
 Create a `.env` file (see `.env.example`):
 
 ```
-MONGO_URI=mongodb+srv://user:pass@cluster.mongodb.net/
+MONGO_URI=mongodb+srv://YOUR_USERNAME:YOUR_PASSWORD@YOUR_CLUSTER.mongodb.net/?retryWrites=true&w=majority
 PORT=8000
 ```
 
